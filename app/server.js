@@ -34,3 +34,7 @@ controller.hears(['hello', 'hi', 'howdy', 'yo', 'sup'], ['direct_message', 'dire
     }
   });
 });
+
+controller.on('outgoing_webhook', (bot, message) => {
+  bot.replyPublic(message, 'I AM AWAKE http://giphy.com/gifs/game-of-thrones-jon-snow-awake-3o7qE2fiT5seO2lIre');
+});
